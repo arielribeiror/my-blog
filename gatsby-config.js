@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `My Blog`,
+    position: 'Frontend Developer',
     description: `A blog about frontend development and other cool stuff.`,
     author: `@arielribeiror`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
@@ -35,3 +36,7 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ],
 }
+
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
