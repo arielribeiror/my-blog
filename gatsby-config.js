@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `My Blog`,
-    position: 'Frontend Developer',
+    position: "Frontend Developer",
     description: `A blog about frontend development and other cool stuff.`,
     author: `@arielribeiror`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
@@ -15,6 +15,19 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/posts`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [],
       },
     },
     `gatsby-transformer-sharp`,
